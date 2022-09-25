@@ -1,4 +1,8 @@
-@import url('http://fonts.cdnfonts.com/css/kennebunkport');
+@font-face {
+    font-family: 'Kennebunkport';
+    src: URL('./kennebunkport.ttf') format('truetype');
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -37,7 +41,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 20vw;
+    width: 23vw;
 }
 
 label{
@@ -51,11 +55,16 @@ input[type='search']{
     border-radius: 8px;
     height: 30px;
     width: 15vw;
-    min-width: 130px;
+    min-width: 180px;
     margin: 5px;
     cursor: text;
     box-shadow: 1px 1px #d8c5be;
     background-color: #d8c5be;
+}
+
+input[type='search']::placeholder{
+    font-family: 'Kennebunkport', sans-serif;
+    letter-spacing: .25rem;
 }
 
 select{
@@ -149,11 +158,6 @@ p{
 @media (max-width: 1000px) {
     .list {
         grid-template-columns: repeat(4, 1fr);
-    }
-}
-@media (max-width: 800px) {
-    .list {
-        grid-template-columns: repeat(3, 1fr);
     }
 }
 @media (max-width: 800px) {
