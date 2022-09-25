@@ -50,13 +50,11 @@ function getPeoples(respData) {
 
 const findThat = document.querySelector("#searchFriend");
 const genderSelector = document.querySelector('#sex');
-const ageSelector = document.querySelector("#age");
-const namesSort = document.querySelector('#namesSort');
+const sortingSelector = document.querySelector("#ageAndName");
 
 findThat.addEventListener("input", sortMembers);
 genderSelector.addEventListener("change", sortMembers);
-ageSelector.addEventListener("change", sortMembers);
-namesSort.addEventListener("change", sortMembers);
+sortingSelector.addEventListener("change", sortMembers);
 
 function sortMembers() {
   let sortedMembers = [...respData]
@@ -73,13 +71,13 @@ function sortMembers() {
     sortedMembers = sortedMembers.filter(element => element.gender === "male")
   }
 
-  if (ageSelector.value === 'upAge') {
+  if (sortingSelector.value === 'upAge') {
     sortedMembers = sortedMembers.sort((a,b) => sortingAge(a, b) );
-  } else if (ageSelector.value === 'downAge') {
+  } else if (sortingSelector.value === 'downAge') {
     sortedMembers = sortedMembers.sort((a, b) => sortingAge(b, a) );
-  } else if (ageSelector.value === 'AtoZ') {
+  } else if (sortingSelector.value === 'AtoZ') {
     sortedMembers = sortedMembers.sort((a, b) => sortingNames(a, b));
-  } else if (ageSelector.value === 'ZtoA') {
+  } else if (sortingSelector.value === 'ZtoA') {
     sortedMembers = sortedMembers.sort((a, b) => sortingNames(b, a));
   } else {
     sortedMembers;
@@ -87,9 +85,6 @@ function sortMembers() {
 
   listOfMembers.innerHTML = '';
   getPeoples(sortedMembers)
-
-  disable(ageSelector, namesSort);
-  disable(namesSort,ageSelector);
 }
 
 function sortingNames(a, b){
@@ -98,12 +93,4 @@ function sortingNames(a, b){
 
 function sortingAge(a, b){
   return a.dob.age - b.dob.age;
-}
-
-function disable(a, b){
-  if (a.value !== "default") {
-   b.setAttribute('disabled', 'disabled')
-   } else if(a.value === "default"){
-    b.removeAttribute('disabled', 'disabled')
-   }
 }
