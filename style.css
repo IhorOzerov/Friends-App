@@ -79,13 +79,14 @@ select{
     border-radius: 7px;
     background-color: #d8c5be;
     font-family: 'Kennebunkport', sans-serif;
-    letter-spacing: 0.12rem;
+    letter-spacing: 0.13rem;
     height: 30px;
 }
 
 option{
     border-radius: 10px;
     color: #c0198b;
+    font-size: 1.3rem;
 }
 
 a{

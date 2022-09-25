@@ -77,13 +77,9 @@ function sortMembers() {
     sortedMembers = sortedMembers.sort((a,b) => sortingAge(a, b) );
   } else if (ageSelector.value === 'downAge') {
     sortedMembers = sortedMembers.sort((a, b) => sortingAge(b, a) );
-  } else {
-    sortedMembers;
-  }
-
-  if (namesSort.value === 'AtoZ') {
+  } else if (ageSelector.value === 'AtoZ') {
     sortedMembers = sortedMembers.sort((a, b) => sortingNames(a, b));
-  } else if (namesSort.value === 'ZtoA') {
+  } else if (ageSelector.value === 'ZtoA') {
     sortedMembers = sortedMembers.sort((a, b) => sortingNames(b, a));
   } else {
     sortedMembers;
