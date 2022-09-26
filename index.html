@@ -11,30 +11,25 @@
   <div class="container">
     <div class="header">Friends App</div>
       <div class="buttons">
-
-          <label>Find your friend <br>
+          <label class="searchLabel">Find your friend <br>
               <input type="search" id="searchFriend" maxlength = 15 placeholder="   Write name here " autocomplete="off" >
           </label>
-
-          <label>Choose gender <br>
-            <select id="sex" autocomplete="off">
+          <label class="searchLabel">Choose gender <br>
+            <select class="searchSelector" id="sex" autocomplete="off">
               <option value="All" >All</option>
               <option value="Male" >M a l e</option>
               <option value="Female" >F e m a l e</option>
             </select>
           </label>
-
-         
-            <label> Sort<br>
-              <select id="ageAndName" autocomplete="off">
-                <option value="default">By default</option>
-                <option value="upAge">Up Age</option>
-                <option value="downAge">Down Age</option>
-                <option value="AtoZ">A to Z</option>
-                <option value="ZtoA">Z to A</option>
-              </select>
-            </label>
-        
+          <label class="searchLabel"> Sort<br>
+            <select class="searchSelector" id="ageAndName" autocomplete="off">
+              <option value="default">By default</option>
+              <option value="upAge">Yonger first</option>
+              <option value="downAge">Older first</option>
+              <option value="AtoZ">A to Z</option>
+              <option value="ZtoA">Z to A</option>
+            </select>
+          </label>
       </div>
     <div class="list"></div>
   </div>
