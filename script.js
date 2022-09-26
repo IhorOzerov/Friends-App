@@ -26,8 +26,7 @@ const getData = (url) => {
      console.log(err);
      mainContainer.innerHTML = `<div class="errorScreen">
      <p class="errorText">Something wrong with connect, try to refresh the page</p>
-     <img class="errorImage" src="./images/err.png" alt="error"></div>
-     `
+     <img class="errorImage" src="./images/err.png" alt="error"></div>`
   }
 }
 getData(url);
@@ -82,7 +81,6 @@ function sortMembers() {
   } else {
     sortedMembers;
   }
-
   listOfMembers.innerHTML = '';
   getPeoples(sortedMembers)
 }

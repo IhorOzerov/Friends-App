@@ -37,13 +37,6 @@ body{
     text-align: center;
 }
 
-.buttons__sorting{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 23vw;
-}
-
 label{
     height: 50px;
     letter-spacing: 0.2rem;
@@ -114,7 +107,7 @@ a{
     background-color: #2d8b57;
     top: 0;
     height: 85px;
-    width: 101%;
+    width: 100%;
     position: absolute;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -152,36 +145,35 @@ p{
     .list {
         grid-template-columns: repeat(5, 1fr);
     }
+
     .buttons__sorting{
         width: auto;
     }
 }
+
 @media (max-width: 1000px) {
     .list {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
 @media (max-width: 800px) {
     .list {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-@media (max-width: 600px) {
+
+@media (max-width: 600px)  {
     .list {
         grid-template-columns: repeat(2, 1fr);
     }
     label{
         font-size: 1.2rem;
+        padding: 10px;
     }
     .buttons{
         flex-wrap: wrap;
-        margin-bottom: 40px;
-    }
-    .buttons__sorting{
-        display: flex;
-        justify-content: space-around;
-        width: 90vw;
-        margin: 10px;
+        margin-bottom: 55px;
     }
     select{
         height: 30px;
@@ -191,7 +183,9 @@ p{
         width: 160px;
         height: 30px;
     }
+
 }
+
 @media (max-width: 400px) {
     .list {
         grid-template-columns: 1fr;
@@ -207,8 +201,30 @@ p{
         width: 120px;
         height: 40px;
     }
-    .buttons__sorting{
-        margin: 30px -10px;
+    label{
+        margin: 30px;
+    }
+    .list{
+        padding-top: 40px;
+    }
+}
+@media (max-width: 300px) {
+    .list {
+        grid-template-columns: 1fr;
+    }
+    .buttons{
+        flex-wrap: wrap;
+    }
+    select{
+        height: 40px;
+        width: 100px;
+    }
+    input[type='search']{
+        width: 120px;
+        height: 40px;
+    }
+    label{
+        margin: 30px;
     }
     .list{
         padding-top: 40px;

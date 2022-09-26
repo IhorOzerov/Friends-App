@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Вивчаємо JS</title>
   <link href='https://fonts.googleapis.com/css?family=MedievalSharp' rel='stylesheet'>
   <link rel="stylesheet" href="style.css">
@@ -9,35 +10,33 @@
 <body>
   <div class="container">
     <div class="header">Friends App</div>
-    <div class="buttons">
+      <div class="buttons">
 
-        <label>Find your friend <br>
-            <input type="search" id="searchFriend" maxlength = 15 placeholder="   Write name here " autocomplete="off" >
-        </label>
+          <label>Find your friend <br>
+              <input type="search" id="searchFriend" maxlength = 15 placeholder="   Write name here " autocomplete="off" >
+          </label>
 
-        <label>Choose gender <br>
-          <select id="sex" autocomplete="off">
-            <option value="All" >All</option>
-            <option value="Male" >M a l e</option>
-            <option value="Female" >F e m a l e</option>
-          </select>
-        </label>
-
-      <div class="buttons__sorting">
-          <label> Sort by <br>
-            <select id="ageAndName" autocomplete="off">
-              <option value="default">By default</option>
-              <option value="upAge">Up Age</option>
-              <option value="downAge">Down Age</option>
-              <option value="AtoZ">A to Z</option>
-              <option value="ZtoA">Z to A</option>
+          <label>Choose gender <br>
+            <select id="sex" autocomplete="off">
+              <option value="All" >All</option>
+              <option value="Male" >M a l e</option>
+              <option value="Female" >F e m a l e</option>
             </select>
           </label>
 
+         
+            <label> Sort<br>
+              <select id="ageAndName" autocomplete="off">
+                <option value="default">By default</option>
+                <option value="upAge">Up Age</option>
+                <option value="downAge">Down Age</option>
+                <option value="AtoZ">A to Z</option>
+                <option value="ZtoA">Z to A</option>
+              </select>
+            </label>
+        
       </div>
-    </div>
-    <div class="list">
-    </div>
+    <div class="list"></div>
   </div>
   <script src="script.js"></script>
 </body>
