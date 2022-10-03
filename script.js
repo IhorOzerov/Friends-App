@@ -20,7 +20,7 @@ const getData = (url) => {
         getPeoples(responseData);
       });
   } catch (err) {
-     console.log(err);
+    console.log(err);
      mainContainer.innerHTML = `<div class="errorScreen">
      <p class="errorText">Something wrong with connect, try to refresh the page</p>
      <p class="errorText">${err}</p>
@@ -29,7 +29,7 @@ const getData = (url) => {
 }
 getData(url);
 
-function getPeoples(responseData) {
+function getPeoples() {
   responseData.forEach((user) => {
     const newCard = document.createElement('div');
     newCard.classList.add('human');
