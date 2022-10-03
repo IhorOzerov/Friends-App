@@ -29,7 +29,7 @@ const getData = (url) => {
 }
 getData(url);
 
-function getPeoples() {
+function getPeoples(responseData) {
   responseData.forEach((user) => {
     const newCard = document.createElement('div');
     newCard.classList.add('human');
