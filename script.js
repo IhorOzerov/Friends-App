@@ -13,23 +13,23 @@ const listOfMembers = document.querySelector(".list");
 const getData = (url) => {
   try {
     fetch(url)  
-      .then(handleErrors)
+      .then(response => handleErrors(response))
       .then(response => response.json())
       .then((json) => {
         responseData.push(...json.results);
         getPeoples(responseData);
       });
   } catch (err) {
-    console.log(err);
-     mainContainer.innerHTML = `<div class="errorScreen">
-     <p class="errorText">Something wrong with connect, try to refresh the page</p>
-     <p class="errorText">${err}</p>
-     <img class="errorImage" src="./images/err.png" alt="error"></div>`
+    console.error(err);
+    mainContainer.innerHTML = `<div class="errorScreen">
+    <p class="errorText">Something wrong with connect, try to refresh the page</p>
+    <p class="errorText">${err}</p>
+    <img class="errorImage" src="./images/err.png" alt="error"></div>`
   }
 }
 getData(url);
 
-function getPeoples() {
+function getPeoples(responseData) {
   responseData.forEach((user) => {
     const newCard = document.createElement('div');
     newCard.classList.add('human');
